@@ -22,7 +22,14 @@ h1,h2,h3,h4,h5,h6{
     color: var(--primary-color);
 }
 
+footer .social>a{
+    color: var(--white-color);
+    opacity: .75;
+}
 
+footer .social>a:hover{
+    opacity: 1;
+}
 
 main>.container {
     padding: 60px 15px 0;

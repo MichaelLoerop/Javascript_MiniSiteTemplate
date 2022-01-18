@@ -12,6 +12,8 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <link href="/css/site.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f434149863.js" crossorigin="anonymous"></script>
     
 </head>
 
@@ -45,7 +47,7 @@
     </div>
 </nav>
 
-    <!-- Main -->
+    <!-- Main-->
     <main class="flex-shrink-0">
        <div class="container">
            <h1 class="mt-5">Template with fixed navbar and sticky footer</h1>
@@ -54,11 +56,25 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark sticky-footer">
-        <div class="container-fluid text-center">
-            <span class="text-light">Place sticky footer content here.</span>
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-2">
+                <div class="col text-light d-flex align-items-center justify-content-center justify-content-lg-start order-last order-lg-first">
+                    <div>&copy;2021 Mike Loerop</div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center justify-content-lg-center">
+                    <img src="/img/Logo-darkmode-SM.png" alt="Michael Loerop Logo" height="50">
+                </div>
+                <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <div class="row">
+                        <div class="col social"><a href="https://www.linkedin.com/in/mikeloerop/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://github.com/MikeLoerop" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://twitter.com/MikeLoerop" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text-center"><a href="#">About Me | Michael Loerop</a></div>
+        
     </footer>
 
     <!-- Bootstrap JS -->
