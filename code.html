@@ -2,7 +2,8 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Michael Loerop</title>
+    <title>Looper: A Coding Project By Michael Loerop</title>
+    <link rel="icon" type="image/x-icon" href="/img/Mike-Loerop-Logo-Favicon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +27,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">APP NAME</a>
+        <a class="navbar-brand" href="index.html"><img src="/img/Looper-Logo-white.png" alt="Looper Logo" height="20px" class="d-flex "></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,14 +38,14 @@
                     <a class="nav-link" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="app.html">The App</a>
+                    <a class="nav-link" href="app.html">Run</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="code.html">The Code</a>
+                    <a class="nav-link active" href="code.html">Code</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank" >Github</a>
+                    <a class="nav-link" href="https://github.com/MikeLoerop/Javascript_Looper" target="_blank" >Github</a>
                 </li>
             </ul>
         </div>
@@ -60,10 +61,62 @@
                <div class="col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            //Call Hello World
-                            function helloWorld () {
-                                alert("Hello World");
-                            }
+                           
+//Get starting and ending values
+function getValues () {
+    let startValue = document.getElementById("startValue").value;
+    let endValue = document.getElementById("endValue").value;
+    
+
+    //Parse inputs into integers
+    startValue = parseInt(startValue);
+    endValue = parseInt(endValue);
+
+    
+    if(Number.isInteger(startValue) && Number.isInteger(endValue)){
+        let numbers = generateNumbers(startValue, endValue);
+        displayNumbers(numbers);
+    }else{
+        alert("You must enter integers");
+    }
+
+    
+}
+
+//Generate numbers from startValue to endValue
+function generateNumbers(startValue, endValue){
+    let numbers = [];
+
+    for (let i = startValue; i <= endValue; i++) {
+        numbers.push(i);
+    }
+
+    return numbers;
+}
+
+//Display the numbers and mark the even numbers bold
+function displayNumbers(numbers) {
+    let templateRow = "";
+    
+    for (let i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+
+        let className = "even";
+        if(number % 2 == 0){
+            className
+        }else{
+
+            className = "odd";
+            
+        }
+        //This does not render correctly on front-end as it contains html.
+        //See repository for full code.
+        templateRow += `<tr><td class="${className}">${number}</td><tr>`;
+                
+    }
+
+    document.getElementById("results").innerHTML = templateRow;
+}
                         </code>
                     </pre>
                </div>
@@ -78,14 +131,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto py-3 bg-dark">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
                 <div class="col text-light d-flex align-items-center justify-content-center justify-content-lg-start order-last order-lg-first">
                     <div>&copy;2021 Mike Loerop</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-center justify-content-lg-center">
-                    <img src="/img/Logo-darkmode-SM.png" alt="Michael Loerop Logo" height="50">
+                    <img src="/img/Mike-Loerop-Logo-darkmode-SM.png" alt="Michael Loerop Logo" height="50">
                 </div>
                 <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
                     <div class="row">
